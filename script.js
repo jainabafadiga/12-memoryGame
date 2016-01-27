@@ -8,7 +8,21 @@ function fillBoard() {
   //TODO: randomly assign positions to the tiles on the screen call
   // addTileToBoard here
   // Hint: You can use a forEach or a for loop
-
+  var tiles=["dog","malala","cat"]
+  var doubletiles=[]
+  for (i=0 ;i<tiles.length; i++){
+    tile= tiles[i]
+    doubletiles.push(tile);
+    doubletiles.push(tile);
+    console.log (doubletiles);
+    
+  }
+  doubletiles
+  shuffledtiles = shuffle(doubletiles)
+  console.log (shuffledtiles)
+  for (i=0 ;i<shuffledtiles;i++){
+  console.log(shuffledtiles[i]);
+  }
 };
 
 function shuffle(array) {
@@ -28,7 +42,10 @@ function shuffle(array) {
   return newArray;
 };
 
-function addTileToBoard(element) {
+function addtiletoBoard (element) {
+  
+
+  
   //TODO: randomly assign ids to the divs
   var div =  "<div id=\"" + assignments +"\" class=\""+ element + " token\"></div>";
   $(".game").append(div);
